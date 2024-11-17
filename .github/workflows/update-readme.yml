@@ -1,0 +1,39 @@
+name: Update README with slides
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        id: node
+        run: npm ci --ignore-scripts
+        working-directory: scripts
+
+      - name: Run script
+        id: script
+        run: npx ts-node updater.ts
+        working-directory: scripts
+        if: steps.node.outcome == 'success'
+
+      - name: Update README.md
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -u README.md
+          git commit -m "feat(docs): update readme" || echo "nothing to commit" && true
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

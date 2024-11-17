@@ -1,0 +1,10 @@
+{
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /vite-2024/ --out ../../dist/vite-2024",
+    "export": "slidev export --per-slide --output ../vite_2024.pdf"
+  }
+}
