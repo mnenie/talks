@@ -20,7 +20,7 @@ remoteAssets: true
 
 
 ---
-src: '../../../reuse/intro.md'
+src: '../../reuse/intro.md'
 class: pl-30
 glowSeed: 14
 ---

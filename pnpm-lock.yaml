@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  is-core-module: npm:@no-shims/is-core-module
-
 importers:
 
   .:
