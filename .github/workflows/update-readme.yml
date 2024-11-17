@@ -13,22 +13,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+      - name: Setup pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies
         id: node
-        run: npm ci --ignore-scripts
-        working-directory: scripts
-
-      - name: Run script
+        run: pnpm install --frozen-lockfile
+        working-directory: scripts 
+        
+      - name: Run 
         id: script
-        run: npx ts-node updater.ts
+        run: pnpm add ts-node typescript --dev || true
+          node --loader ts-node/esm updater.ts
         working-directory: scripts
         if: steps.node.outcome == 'success'
 
-      - name: Update README.md
+      - name: Update readme
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
