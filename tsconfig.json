@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "strict": true,
-    "noEmit": true,
-    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "exclude": ["**/*.md"]
+  "exclude": ["node_modules", "**/*.md"]
 }

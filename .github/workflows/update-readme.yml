@@ -18,13 +18,16 @@ jobs:
 
       - name: Install dependencies
         id: node
-        run: pnpm install --frozen-lockfile
-        working-directory: scripts 
+        run: npm install --frozen-lockfile
+        working-directory: scripts
+
+      - name: Install ts-node and typescript
+        run: npm install ts-node typescript --save-dev
+        working-directory: scripts
         
       - name: Run 
         id: script
-        run: pnpm add ts-node typescript --dev || true
-          node --loader ts-node/esm updater.ts
+        run: npx ts-node updater.ts
         working-directory: scripts
         if: steps.node.outcome == 'success'
 
