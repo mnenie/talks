@@ -13,19 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup pnpm
-        run: npm install -g pnpm
-
+      - name: Setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - name: Install dependencies
         id: node
-        run: npm install --frozen-lockfile
+        run: npm ci --ignore-scripts
         working-directory: scripts
-
-      - name: Install ts-node and typescript
-        run: npm install ts-node typescript --save-dev
-        working-directory: scripts
-        
-      - name: Run 
+  
+      - name: Run script
         id: script
         run: npx ts-node updater.ts
         working-directory: scripts
