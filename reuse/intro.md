@@ -6,9 +6,9 @@ layout: cover
 
 <div class="[&>*]:important-leading-10 opacity-80">
 
-Frontend разработчик на {Vue} и {Nuxt}<br>
-Член core команды {UnaUI}<br>
-Активный контрибьютер во {Vue} и {Nuxt} экосистемы<br>
+Frontend разработчик на Vue и Nuxt<br>
+Член core команды UnaUI<br>
+Активный контрибьютер во Vue и Nuxt экосистемы<br>
 Разрабатываю(-ал) широкий спектр проектов различных масштабов
 
 </div>

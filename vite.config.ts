@@ -8,12 +8,27 @@ export default defineConfig({
       markdownItSetup(md) {
         md.use(MarkdownItMagicLink, {
           linksMap: {
-            Vue: "https://github.com/vuejs/core",
-            Nuxt: "https://github.com/nuxt/nuxt",
-            UnaUI: "https://github.com/una-ui/una-ui",
+            Vue: {
+              link: "https://github.com/vuejs/core",
+              imageUrl:
+                "https://avatars.githubusercontent.com/u/6128107?s=48&v=4",
+            },
+            Nuxt: {
+              link: "https://github.com/nuxt/nuxt",
+              imageUrl:
+                "https://avatars.githubusercontent.com/u/23360933?s=48&v=4",
+            },
+            UnaUI: {
+              link: "https://github.com/una-ui/una-ui",
+              imageUrl:
+                "hhttps://avatars.githubusercontent.com/u/140925492?s=48&v=4",
+            },
           },
         });
       },
     },
+  },
+  build: {
+    assetsDir: "assets",
   },
 });
