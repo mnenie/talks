@@ -21,7 +21,7 @@ export default defineConfig({
             UnaUI: {
               link: "https://github.com/una-ui/una-ui",
               imageUrl:
-                "hhttps://avatars.githubusercontent.com/u/140925492?s=48&v=4",
+                "https://avatars.githubusercontent.com/u/140925492?s=48&v=4",
             },
           },
         });

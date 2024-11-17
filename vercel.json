@@ -3,9 +3,5 @@
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/:name/:match*", "destination": "/:name/index.html" }
-  ],
-  "static": {
-    "directory": "public",
-    "patterns": ["**/*"]
-  }
+  ]
 }
