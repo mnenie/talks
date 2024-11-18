@@ -1,3 +1,4 @@
+
 :root {
   --slidev-code-padding: 8px 10px;
   --slidev-code-background: #16161690 !important;
@@ -9,11 +10,10 @@ h6 {
   letter-spacing: 0 !important;
 }
 
-.dark #slide-content {
-  background-color: black !important;
+.slidev-slide-content{
+  background: #000 !important;
 }
 
-/* Transitions */
 .slidev-vclick-target {
   transition:
     opacity 500ms ease,
@@ -118,41 +118,7 @@ iframe {
   border: 1px solid #eee1;
 }
 
-.rough-annotation > path[stroke-width='2'] {
-  stroke-width: calc(2px * var(--slidev-slide-scale));
-}
-
-/* Magic Links */
-.markdown-magic-link {
-  display: inline-flex;
-  align-items: center;
-  transform: translateY(6px);
-  line-height: 100%;
-  color: #fffc;
-  --uno: gap-1 transition rounded px1 py1 mx--0.5 important-border-0 font-condensed;
-}
-
-.markdown-magic-link:hover {
-  background: #8883;
-}
-
-.markdown-magic-link-image {
-  display: inline-block;
-  height: 1.2em;
-  width: 1.2em;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 2px;
-}
-
-.markdown-magic-link.markdown-magic-link-github-at {
-  transform: translateY(6px);
-  --uno: pl-0 py-0 pr2 uppercase text-sm gap-1.2 rounded-full;
-}
-
-.markdown-magic-link.markdown-magic-link-github-at .markdown-magic-link-image {
-  height: 1.6em;
-  width: 1.6em;
-  border-radius: 50%;
+.slidev-layout :not(pre)>code {
+  color: var(--bg-key);
+  background: none;
 }
