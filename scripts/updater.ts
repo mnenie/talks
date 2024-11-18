@@ -54,6 +54,7 @@ function addReadmes(): void {
         path.resolve(__dirname, "../"),
         dirPath,
       );
+      // @ts-ignore
       const link = `\n* [${header}](${relativePath.replaceAll("\\", "/").replace(/^\.\./, ".")})\n`;
       if (!contentMain.includes(link)) {
         contentMain += link;

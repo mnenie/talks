@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["es2021"],
-    "module": "ESNext",
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "allowJs": true,
-    "esModuleInterop": true
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }
