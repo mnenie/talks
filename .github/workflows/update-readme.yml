@@ -22,16 +22,8 @@ jobs:
         run: npm ci --ignore-scripts
         working-directory: scripts
 
-      - name: Transpile
-        run: npx tsc updater.ts
-        working-directory: scripts
-
-      - name: Working with cjs
-        run: mv updater.js updater.cjs
-        working-directory: scripts
-
       - name: Run
-        run: node updater.cjs
+        run: node --loader ts-node/esm updater.ts
         working-directory: scripts
         if: steps.node.outcome == 'success'
 
