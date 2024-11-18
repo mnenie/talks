@@ -22,9 +22,12 @@ jobs:
         run: npm ci --ignore-scripts
         working-directory: scripts
   
-      - name: Run script
-        id: script
-        run: npx ts-node updater.ts
+      - name: Transpile
+        run: npx tsc updater.ts
+        working-directory: scripts
+
+      - name: Run
+        run: node updater.js
         working-directory: scripts
         if: steps.node.outcome == 'success'
 
