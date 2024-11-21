@@ -8,10 +8,6 @@ importers:
 
   .:
     dependencies:
-      tailwind-merge:
-        specifier: ^2.5.4
-        version: 2.5.4
-    devDependencies:
       '@iconify/json':
         specifier: ^2.2.271
         version: 2.2.271
@@ -27,6 +23,16 @@ importers:
       '@slidev/theme-seriph':
         specifier: ^0.25.0
         version: 0.25.0
+      seedrandom:
+        specifier: ^3.0.5
+        version: 3.0.5
+      tailwind-merge:
+        specifier: ^2.5.4
+        version: 2.5.4
+      unocss:
+        specifier: ^0.64.0
+        version: 0.64.0(postcss@8.4.49)(rollup@4.26.0)(vite@5.4.11(@types/node@22.9.0))(vue@3.5.12(typescript@5.6.3))
+    devDependencies:
       '@sxzz/eslint-config':
         specifier: ^4.4.1
         version: 4.4.1(@typescript-eslint/eslint-plugin@8.14.0(@typescript-eslint/parser@8.14.0(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3))(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3))(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
@@ -57,18 +63,12 @@ importers:
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
-      seedrandom:
-        specifier: ^3.0.5
-        version: 3.0.5
       serve:
         specifier: ^14.2.4
         version: 14.2.4
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
-      unocss:
-        specifier: ^0.64.0
-        version: 0.64.0(postcss@8.4.49)(rollup@4.26.0)(vite@5.4.11(@types/node@22.9.0))(vue@3.5.12(typescript@5.6.3))
 
   2024_vite/src: {}
 
