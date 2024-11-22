@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useNav } from "@slidev/client";
 import { twMerge, type ClassNameValue } from "tailwind-merge";
-import { computed, nextTick, onUnmounted, ref, watch } from "vue";
+import { computed, onUnmounted, ref, watch } from "vue";
 
 const {
   duration = 0.7,
