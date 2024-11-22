@@ -18,7 +18,7 @@ slide: slide-purple
     <div v-click="1" v-drag="'s-1'" class="text-2xl !w-fit" >Bundle</div>
     <div v-click="2" v-drag="'s-2'" class="text-2xl !w-fit flex" >Tree Shaking</div>
     <div v-click="3" v-drag="'s-3'" class="text-2xl !w-fit" >Rollup</div>
-    <div v-click="4" v-drag="'s-4'" class="text-2xl !w-fit" >ESbuild</div>
+    <div v-click="4" v-drag="'s-4'" class="text-2xl !w-fit" >esbuild</div>
     <div v-click="5" v-drag="'s-5'" class="text-2xl !w-fit" >HMR</div>
     <div v-click="6" v-drag="'s-6'" class="text-2xl !w-fit" >ESM</div>
     <div v-click="7" v-drag="'s-7'" class="text-2xl !w-fit" >Chunk splitting</div>

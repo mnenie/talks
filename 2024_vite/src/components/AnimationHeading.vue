@@ -55,15 +55,14 @@ watch(
   () => nav.clicks.value,
   (newClickValue) => {
     if (newClickValue === index) {
-      nextTick(() => {
-        startAnimation();
-      });
+      startAnimation();
     } else if (newClickValue > index) {
       stopAnimation();
     }
   },
   {
     immediate: true,
+    flush: "post",
   },
 );
 

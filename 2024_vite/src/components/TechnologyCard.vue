@@ -42,33 +42,12 @@ const classes = computed(() => {
 
 <template>
   <div :class="classes">
-    <Transition name="title" mode="out-in">
-      <div v-if="$slots.default">
-        <slot />
-      </div>
-      <div v-else flex="~ items-center gap-2">
-        <img :src="icon" :class="iconClass" h-10 />
-        <div class="text-2xl">{{ title }}</div>
-      </div>
-    </Transition>
+    <div v-if="$slots.default">
+      <slot />
+    </div>
+    <div v-else flex="~ items-center gap-2">
+      <img :src="icon" :class="iconClass" h-10 />
+      <div class="text-2xl">{{ title }}</div>
+    </div>
   </div>
 </template>
-
-<style scoped>
-.title-enter-active,
-.title-leave-active {
-  transition: all 0.3s ease;
-}
-
-.title-enter-from,
-.title-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.title-enter-to,
-.title-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
