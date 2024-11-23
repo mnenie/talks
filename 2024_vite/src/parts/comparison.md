@@ -37,3 +37,22 @@ layout: center
 
 
 <span text-sm>Mac M1 16CPU, 10 небольших компонентов, Vue3 (vue-router, pinia)</span>
+
+---
+layout: cover
+---
+
+<div transition transition-500 flex="~ items-center justify-center"
+  :class="$clicks > 0 && 'translate-y--50 scale-60 op80'">
+  <h1 class="!text-5xl !mb-12">Почему такая разница ?</h1>
+</div>
+
+<div transition transition-500 text-xl font-semibold mt--10>
+  <AlertCard v-click color="green" absolute top-58 left-30>esbuild</AlertCard>
+  <AlertCard v-click color="green" absolute top-78 left-40>Rollup</AlertCard>
+  <AlertCard v-click color="green" absolute top-98 left-20>HMR</AlertCard>
+
+  <AlertCard v-click color="red" absolute top-58 right-30>Babel</AlertCard>
+  <AlertCard v-click color="red" absolute top-78 right-40>Webpack</AlertCard>
+  <AlertCard v-click color="red" absolute top-98 right-20>WDS</AlertCard>
+</div>
