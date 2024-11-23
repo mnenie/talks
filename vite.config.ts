@@ -23,6 +23,11 @@ export default defineConfig({
               imageUrl:
                 "https://avatars.githubusercontent.com/u/140925492?s=48&v=4",
             },
+            Slidev: {
+              link: "https://github.com/slidevjs/slidev",
+              imageUrl:
+                "https://avatars.githubusercontent.com/u/83095831?s=48&v=4",
+            },
           },
         });
       },

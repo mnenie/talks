@@ -2,7 +2,7 @@
 import { twMerge } from "tailwind-merge";
 import { computed, useAttrs } from "vue";
 interface AlertProps {
-  color?: "default" | "purple" | "blue" | "red" | "green";
+  color?: "default" | "purple" | "blue" | "red" | "green" | "yellow";
   content?: string;
 }
 const { color = "blue", content } = defineProps<AlertProps>();
@@ -22,6 +22,9 @@ const colorPresets = {
   },
   purple: {
     color: "bg-purple/40 b-purple c-purple",
+  },
+  yellow: {
+    color: "bg-yellow/40 b-yellow c-yellow",
   },
 };
 

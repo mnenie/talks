@@ -60,7 +60,7 @@ layout: statement
 
 <div transition transition-500
   :class="$clicks > 0 && 'translate-y--50 scale-60 op80'">
-  <h1 class="!text-5xl">НО</h1>
+  <h1 text="5xl!">НО</h1>
   <div transition transition-500 ease-in-out text-7 mb2 :class="$clicks > 0 ? '' : 'op0'">Задумывались ли вы？</div>
 </div>
 
