@@ -14,7 +14,7 @@ slide: slide-purple
 <img src="https://vitejs.ru/logo-with-shadow.png" class="h-28" />
 
 
-<div v-if="$clicks < 8">
+<div>
     <div v-click="1" v-drag="'s-1'" class="text-2xl !w-fit" >Bundle</div>
     <div v-click="2" v-drag="'s-2'" class="text-2xl !w-fit flex" >Tree Shaking</div>
     <div v-click="3" v-drag="'s-3'" class="text-2xl !w-fit" >Rollup</div>
@@ -23,8 +23,6 @@ slide: slide-purple
     <div v-click="6" v-drag="'s-6'" class="text-2xl !w-fit" >ESM</div>
     <div v-click="7" v-drag="'s-7'" class="text-2xl !w-fit" >Chunk splitting</div>
 </div>
-
-<p v-click="8" class="text-2xl">И многое другое</p>
 
 
 ---
@@ -129,6 +127,8 @@ foo(1, 2)
 </div>
 
 <p v-click="3">НО ! Внимательно с <span v-mark.orange="4">сайд-эффектами</span></p>
+
+<!-- TODO -->
 
 ---
 class: ml10
