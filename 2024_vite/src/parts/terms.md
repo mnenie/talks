@@ -15,13 +15,13 @@ slide: slide-purple
 
 
 <div>
-    <div v-click="1" v-drag="'s-1'" class="text-2xl !w-fit" >Bundle</div>
-    <div v-click="2" v-drag="'s-2'" class="text-2xl !w-fit flex" >Tree Shaking</div>
-    <div v-click="3" v-drag="'s-3'" class="text-2xl !w-fit" >Rollup</div>
-    <div v-click="4" v-drag="'s-4'" class="text-2xl !w-fit" >esbuild</div>
-    <div v-click="5" v-drag="'s-5'" class="text-2xl !w-fit" >HMR</div>
-    <div v-click="6" v-drag="'s-6'" class="text-2xl !w-fit" >ESM</div>
-    <div v-click="7" v-drag="'s-7'" class="text-2xl !w-fit" >Chunk splitting</div>
+  <div v-click="1" v-drag="'s-1'" class="text-2xl !w-fit" >Bundle</div>
+  <div v-click="2" v-drag="'s-2'" class="text-2xl !w-fit flex" >Tree Shaking</div>
+  <div v-click="3" v-drag="'s-3'" class="text-2xl !w-fit" >Rollup</div>
+  <div v-click="4" v-drag="'s-4'" class="text-2xl !w-fit" >esbuild</div>
+  <div v-click="5" v-drag="'s-5'" class="text-2xl !w-fit" >HMR</div>
+  <div v-click="6" v-drag="'s-6'" class="text-2xl !w-fit" >ESM</div>
+  <div v-click="7" v-drag="'s-7'" class="text-2xl !w-fit" >Chunk splitting</div>
 </div>
 
 
@@ -103,6 +103,7 @@ class: ml10
 
 <div v-click="1" mt-8>
 
+````md magic-move {lines: true, at: 2}
 ```ts
 // example.js
 
@@ -116,6 +117,40 @@ export function unused(a, b) {
 ```
 
 ```ts
+// example.js
+
+export function foo(a, b) {
+  return a * b;
+}
+
+export function unused(a, b) {
+  return a - b;
+}
+```
+
+```ts
+// example.js
+
+export function foo(a, b) {
+  return a * b;
+}
+
+export function unused(a, b) {
+  console.log('тригер')
+  return a - b;
+}
+```
+````
+
+````md magic-move {lines: true, at: 2}
+```ts
+// main.js
+import { foo } from './example.js'
+
+foo(1, 2)
+```
+
+```ts
 // main.js
 import { foo } from './example.js'
 
@@ -123,6 +158,16 @@ foo(1, 2)
 
 // unused не попадет в финальный бандл, даже если бы мы ее импортировали
 ```
+
+```ts
+// main.js
+import { foo } from './example.js'
+
+foo(1, 2)
+
+// unused ! попадет в финальный бандл
+```
+````
 
 </div>
 
