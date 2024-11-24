@@ -9,10 +9,10 @@ layout: center
 ---
 
 <div class="grid w-full items-center grid-cols-2 gap-10">
-    <img src="/soj/1.png" h-full rounded-md />
-    <img src="/soj/2.png" h-full rounded-md />
-    <img src="/soj/3.png" h-full rounded-md />
-    <img src="/soj/4.png" h-full rounded-md />
+  <img src="/soj/1.png" h-full rounded-md />
+  <img src="/soj/2.png" h-full rounded-md />
+  <img src="/soj/3.png" h-full rounded-md />
+  <img src="/soj/4.png" h-full rounded-md />
 </div>
 
 

@@ -43,30 +43,9 @@ const classes = computed(() => {
 
 <template>
   <div :class="classes">
-    <Transition name="title" mode="out-in">
-      <slot v-if="$slots.default">
-        <slot />
-      </slot>
-      <span v-else :key="content">{{ content }}</span>
-    </Transition>
+    <slot v-if="$slots.default">
+      <slot />
+    </slot>
+    <span v-else :key="content">{{ content }}</span>
   </div>
 </template>
-
-<style scoped>
-.title-enter-active,
-.title-leave-active {
-  transition: all 0.3s ease;
-}
-
-.title-enter-from,
-.title-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.title-enter-to,
-.title-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>

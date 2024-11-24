@@ -64,15 +64,15 @@ dragPos:
 </div>
 
 <div v-drag="'a-1'">
-  <SharedArrow inert x1="435" y1="306" x2="435" y2="114" stroke="dashed" :color="[$clicks >=3 ? '#2b2b2b' : '#fde047']" />
+  <SharedArrow inert x1="435" y1="306" x2="435" y2="114" stroke="dashed" :color="$clicks >=3 ? '#2b2b2b' : '#fde047'" />
 </div>
 
 <div v-drag="'a-2'">
-  <SharedArrow inert x1="435" y1="230" x2="435" y2="114" stroke="dashed" :color="[($clicks >= 1 && $clicks < 3) || $clicks > 4 ? '#2b2b2b' : '#fca5a5']" />
+  <SharedArrow inert x1="435" y1="230" x2="435" y2="114" stroke="dashed" :color="($clicks >= 1 && $clicks < 3) || $clicks > 4 ? '#2b2b2b' : '#fca5a5'" />
 </div>
 
 <div v-drag="'a-3'">
-  <SharedArrow inert x1="435" y1="306" x2="435" y2="114" stroke="dashed" :color="[$clicks >= 1 && $clicks < 5 ? '#2b2b2b' : '#fdba74']" />
+  <SharedArrow inert x1="435" y1="306" x2="435" y2="114" stroke="dashed" :color="$clicks >= 1 && $clicks < 5 ? '#2b2b2b' : '#fdba74'" />
 </div>
 
 

@@ -20,7 +20,7 @@ const nav = useNav();
 const scope = ref(null);
 const wordsArray = computed(() => words.split(" "));
 
-const spanStyle = computed(() => ({
+const headingStyle = computed(() => ({
   opacity: 0,
   filter: filter ? "blur(10px)" : "none",
   transition: `opacity ${duration}s, filter ${duration}s`,
@@ -83,7 +83,7 @@ onUnmounted(() => {
         v-for="(word, idx) in wordsArray"
         :key="word + idx"
         class="inline-block"
-        :style="spanStyle"
+        :style="headingStyle"
       >
         {{ word }}&nbsp;
       </h1>

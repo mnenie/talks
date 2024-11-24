@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, useId } from "vue";
 
 const props = defineProps<{
   x1: number | string;
@@ -30,7 +30,7 @@ const svgStyle = computed(() => {
   };
 });
 
-const id = String(`svg-${Math.random()}`);
+const id = useId();
 </script>
 
 <template>
