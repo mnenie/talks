@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "slidev",
     "build": "slidev build --base /keep-alive-2024/ --out ../../dist/keep-alive-2024",
-    "export": "slidev export --per-slide --output ../keep_alive_2024.pdf",
+    "export": "slidev export --per-slide --output ../2024-05-30-keep-alive-2024.pdf",
     "format": "prettier --write \"**/*.{vue,ts,js}\""
   },
   "dependencies": {
