@@ -44,15 +44,11 @@ layout: cover
   <AlertCard v-click absolute top-98 left-70>pnpm create vite my-svelte-app --template svelte-ts</AlertCard>
 </div>
 
-<!-- рассказать про команды. типо вы зачастую пользуетесь такой или такой и т.д -->
-
 ---
 layout: center
 ---
 
 <img src="https://i.pinimg.com/originals/21/11/61/21116158daaeb1459b4ec0758505e1ad.gif" w-full h-full />
-
-<!-- создался стартовый темплэйт и вы начинаете жестко кодить -->
 
 ---
 layout: statement
@@ -78,12 +74,41 @@ layout: center
 
 <AnimationHeading :index="0" words="Что это такое ?" />
 <AnimationHeading v-click :index="1" words="Зачем они нужны ?" />
-<AnimationHeading v-click :index="2" words="Как это работает ?" />
 
 ---
 layout: center
 ---
 
-<img src="https://avatars.dzeninfra.ru/get-zen_doc/4281215/pub_607acf24eac7203d75710dc8_607acff4eac7203d7573faf6/scale_1200" class="h-full" />
+<div transition transition-500 flex="~ items-center justify-center">
+  <h1 class="!text-5xl !mb-12">?</h1>
+</div>
 
-<!-- пройдемся по дну и разберемся как это все работает изнутри -->
+<div transition transition-500 text-xl font-semibold mt--10>
+  <AlertCard color="green" absolute top-48 left-30>.vue</AlertCard>
+  <AlertCard color="green" absolute top-68 left-40>.ts</AlertCard>
+  <AlertCard color="green" absolute top-88 left-20>.svelte</AlertCard>
+
+  <AlertCard color="yellow" absolute top-68 right-64>.js</AlertCard>
+  <AlertCard color="yellow" absolute top-68 right-40>.html</AlertCard>
+  <AlertCard color="yellow" absolute top-68 right-20>.css</AlertCard>
+</div>
+
+---
+layout: center
+---
+
+<AnimationHeading :index="0" words="Как это работает ?" />
+
+---
+layout: center
+dragPos:
+  s-1: -71,0,0,0
+  s-2: -71,0,0,0
+  s-3: -71,0,0,0
+  s-4: -71,0,0,0
+  s-5: -71,0,0,0
+  s-6: -71,0,0,0
+  s-7: -71,0,0,0
+---
+
+<img src="https://avatars.dzeninfra.ru/get-zen_doc/4281215/pub_607acf24eac7203d75710dc8_607acff4eac7203d7573faf6/scale_1200" class="h-full" />

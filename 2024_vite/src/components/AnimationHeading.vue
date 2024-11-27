@@ -65,10 +65,6 @@ watch(
     flush: "post",
   },
 );
-
-onUnmounted(() => {
-  stopAnimation();
-});
 </script>
 
 <template>
