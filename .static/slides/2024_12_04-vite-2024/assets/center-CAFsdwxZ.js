@@ -1,0 +1,1 @@
+import{o as s,b as t,e as l,f as a,i as o}from"./modules/vue-D5j5L_-Y.js";import{u as r}from"./slidev/context-BKraLoTl.js";const c={class:"w-full flex flex-col items-center justify-center"},d={__name:"center",setup(n){return r(),(e,i)=>(s(),t("div",{class:o(["slidev-layout center w-full flex",e.$attrs.slide])},[l("div",c,[a(e.$slots,"default")])],2))}};export{d as _};
