@@ -9,26 +9,28 @@ layout: statement
 ---
 layout: center
 dragPos: 
-  a-1: 402,142,9,102,54
-  a-2: 484,160,9,102,0
-  a-3: 567,142,9,102,-54
+  a-1: 386,162,9,102,47
+  a-2: 490,175,9,102,0
+  a-3: 595,161,9,102,-47
 ---
 
 <TechnologyCard 
   title="Vite" 
-  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png" 
-  class="!w-fit !h-fit translate-y--30"
+  icon="/base/vite.png" 
+  iconClass="h-12"
+  class="!w-[210px] translate-y--30 !h-fit" 
   :disabled="$clicks >= 1" 
 />
 
-<div flex="~ gap-30 items-center" class="translate-y-0">
+<div flex="~ gap-30 items-center" class="translate-y-10">
   <div class="flex flex-col" relative>
     <TechnologyCard 
       title="esbuild" 
       color="yellow" 
-      icon="https://avatars.githubusercontent.com/u/65141206?s=200&v=4"
       :disabled="$clicks >= 3"
-      class="!w-fit !h-fit" 
+      icon="/base/esbuild.png" 
+      iconClass="h-9"
+      class="!w-fit" 
     />
     <ul v-click="2" absolute mt-18 text-sm whitespace-nowrap>
       <li>Ограниченный контроль <br/> чанков и тришейкинга</li>
@@ -42,7 +44,7 @@ dragPos:
       color="red" 
       icon="https://seeklogo.com/images/R/rollup-js-logo-F3925E2546-seeklogo.com.png" 
       :disabled="($clicks >= 1 && $clicks < 3) || $clicks > 4"
-      class="!w-fit !h-fit" 
+      class="!w-fit" 
     />
     <ul v-click="4" absolute mt-18 text-sm whitespace-nowrap>
       <li>Медленная скорость сборки <br /> по сравнению с нативной</li>
@@ -52,10 +54,10 @@ dragPos:
     <TechnologyCard 
       title="SWC" 
       color="orange"
-      icon="https://seeklogo.com/images/S/swc-logo-6CDDC10E4E-seeklogo.com.png" 
-      iconClass="h-5 my-2.5"
+      icon="/base/swc.png" 
+      iconClass="h-5"
+      class="!w-fit" 
       :disabled="$clicks >= 1 && $clicks < 5"
-      class="!w-fit !h-fit" 
     />
     <ul v-click="6" absolute mt-18 text-sm whitespace-nowrap>
       <li>Большой размер бинарника</li>
@@ -64,15 +66,15 @@ dragPos:
 </div>
 
 <div v-drag="'a-1'">
-  <SharedArrow inert x1="435" y1="306" x2="435" y2="114" stroke="dashed" :color="$clicks >=3 ? '#2b2b2b' : '#fde047'" />
+  <SharedArrow inert x1="435" y1="314" x2="435" y2="114" stroke="dashed" :color="$clicks >=3 ? '#2b2b2b' : '#fde047'" />
 </div>
 
 <div v-drag="'a-2'">
-  <SharedArrow inert x1="435" y1="230" x2="435" y2="114" stroke="dashed" :color="($clicks >= 1 && $clicks < 3) || $clicks > 4 ? '#2b2b2b' : '#fca5a5'" />
+  <SharedArrow inert x1="435" y1="252" x2="435" y2="114" stroke="dashed" :color="($clicks >= 1 && $clicks < 3) || $clicks > 4 ? '#2b2b2b' : '#fca5a5'" />
 </div>
 
 <div v-drag="'a-3'">
-  <SharedArrow inert x1="435" y1="306" x2="435" y2="114" stroke="dashed" :color="$clicks >= 1 && $clicks < 5 ? '#2b2b2b' : '#fdba74'" />
+  <SharedArrow inert x1="435" y1="314" x2="435" y2="114" stroke="dashed" :color="$clicks >= 1 && $clicks < 5 ? '#2b2b2b' : '#fdba74'" />
 </div>
 
 
@@ -88,7 +90,7 @@ layout: center
 ---
 
 <div flex="~ items-center justify-center gap-6">
-  <img src="https://rolldown.rs/rolldown-round.svg" h-16 />
+  <img src="/base/rolldown.png" h-16 />
   <h1 class="!text-5xl mt-4">Rolldown</h1>
 </div>
 
@@ -96,40 +98,40 @@ layout: center
 ---
 layout: center
 dragPos:
-  a-1: 488,174,9,102,0
-  a-2: 488,304,9,102,0
+  a-1: 488,154,9,102,0
+  a-2: 488,307,9,102,0
 ---
 
-<div class="flex flex-col gap-20">
+<div class="flex flex-col gap-30">
   <TechnologyCard 
     title="Vite" 
-    icon="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png"
-    iconClass="h-8 my-1" 
+    icon="/base/vite.png"
+    iconClass="h-12 my-1" 
     class="!w-[200px] !h-fit flex items-center justify-center pl-2" 
   />
   <TechnologyCard
     v-click="1" 
     title="Rolldown" 
-    icon="https://rolldown.rs/rolldown-round.svg" 
+    icon="/base/rolldown.png" 
     color="yellow" 
     iconClass="h-8 my-1"
-    class="!w-[200px] !h-fit flex items-center justify-center" 
+    class="!w-[200px] flex items-center justify-center" 
   />
   <TechnologyCard 
     v-click="2"
     title="OXC" 
-    icon="https://cdn.jsdelivr.net/gh/oxc-project/oxc-assets/round.svg" 
+    icon="/base/oxc.svg" 
     color="blue" 
-    class="!w-[200px] !h-fit flex items-center justify-center pl-2" 
+    class="!w-[200px] flex items-center justify-center pl-2" 
   />
 </div>
 
 <div v-drag="'a-1'" v-click="1" >
-  <SharedArrow inert x1="435" y1="186" x2="435" y2="114" stroke="dashed" color="#fde047" />
+  <SharedArrow inert x1="435" y1="214" x2="435" y2="114" stroke="dashed" color="#fde047" />
 </div>
 
 <div v-drag="'a-2'" v-click="2" >
-  <SharedArrow inert x1="435" y1="186" x2="435" y2="114" stroke="dashed" color="#60a5fa" />
+  <SharedArrow inert x1="435" y1="214" x2="435" y2="114" stroke="dashed" color="#60a5fa" />
 </div>
 
 
@@ -161,7 +163,7 @@ layout: statement
     <p>Vue 3.5 (main ветка)</p>
     <p>Vue 3.5 (rolldown ветка)</p>
   </div>
-  <div class="flex flex-col gap-10">
+  <div class="flex flex-col h-full justify-between">
     <span text-sm>Rollup + rollup-plugin-typescript2 + terser, tsc + api-extractor для dts bundling</span>
     <span text-sm>Rollup + rollup-plugin-esbuild + swc minify <br> tsc + rollup-plugin-dts для dts bundling</span>
     <span text-sm>Rolldown (built-in transform + minify) <br> oxc-transform + rollup-plugin-dts для dts bundling</span>

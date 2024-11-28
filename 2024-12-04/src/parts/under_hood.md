@@ -1,25 +1,27 @@
 ---
 layout: center
 dragPos: 
-  a-1: 402,142,9,102,54
-  a-2: 484,160,9,102,0
-  a-3: 567,142,9,102,-54
+  a-1: 386,162,9,102,47
+  a-2: 490,175,9,102,0
+  a-3: 595,161,9,102,-47
 ---
 
 <TechnologyCard 
   title="Vite" 
-  icon="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png" 
-  class="!w-fit !h-fit translate-y--30" 
+  icon="/base/vite.png" 
+  iconClass="h-12"
+  class="!w-[210px] translate-y--30 !h-fit" 
 />
 
-<div flex="~ gap-30 items-center" class="translate-y-0">
+<div flex="~ gap-30 items-center" class="translate-y-10">
   <div class="flex flex-col" relative>
     <TechnologyCard 
       v-click="1" 
       title="esbuild" 
       color="yellow" 
-      icon="https://avatars.githubusercontent.com/u/65141206?s=200&v=4" 
-      class="!w-fit !h-fit" 
+      icon="/base/esbuild.png" 
+      iconClass="h-9"
+      class="!w-fit" 
     />
     <ul v-click="4" absolute mt-18 text-sm>
       <li>Pre-bundling</li>
@@ -33,7 +35,7 @@ dragPos:
       title="Rollup" 
       color="red" 
       icon="https://seeklogo.com/images/R/rollup-js-logo-F3925E2546-seeklogo.com.png" 
-      class="!w-fit !h-fit" 
+      class="!w-fit" 
     />
     <ul v-click="5" absolute mt-18 text-sm whitespace-nowrap>
       <li>Продашен бандлинг</li>
@@ -46,9 +48,9 @@ dragPos:
       v-click="3" 
       title="SWC" 
       color="orange" 
-      icon="https://seeklogo.com/images/S/swc-logo-6CDDC10E4E-seeklogo.com.png" 
-      iconClass="h-5 my-2.5"
-      class="!w-fit !h-fit" 
+      icon="/base/swc.png" 
+      iconClass="h-5"
+      class="!w-fit" 
     />
     <ul v-click="6" absolute mt-18 text-sm whitespace-nowrap>
       <li>React refresh</li>
@@ -58,13 +60,13 @@ dragPos:
 </div>
 
 <div v-click="1" v-drag="'a-1'">
-  <SharedArrow inert x1="435" y1="306" x2="435" y2="114" stroke="dashed" color="#fde047" />
+  <SharedArrow inert x1="435" y1="320" x2="435" y2="114" stroke="dashed" color="#fde047" />
 </div>
 
 <div v-click="2" v-drag="'a-2'">
-  <SharedArrow inert x1="435" y1="230" x2="435" y2="114" stroke="dashed" color="#fca5a5" />
+  <SharedArrow inert x1="435" y1="256" x2="435" y2="114" stroke="dashed" color="#fca5a5" />
 </div>
 
 <div v-click="3" v-drag="'a-3'">
-  <SharedArrow inert x1="435" y1="306" x2="435" y2="114" stroke="dashed" color="#fdba74" />
+  <SharedArrow inert x1="435" y1="320" x2="435" y2="114" stroke="dashed" color="#fdba74" />
 </div>

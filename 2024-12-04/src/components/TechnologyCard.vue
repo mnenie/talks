@@ -8,7 +8,7 @@ interface AlertProps {
   disabled?: boolean;
   iconClass?: string;
 }
-const { color = "purple", disabled = false } = defineProps<AlertProps>();
+const { color = "purple", disabled = false, title } = defineProps<AlertProps>();
 
 const colorPresets = {
   purple: {
@@ -33,11 +33,12 @@ const attrs = useAttrs();
 const classes = computed(() => {
   return [
     twMerge(
-      "b-1 grid rounded-md place-items-center text-xl font-bold duration-200 px-4 py-1 text-nowrap",
+      "b-1 grid rounded-md place-items-center text-xl h-14 font-bold duration-200 px-4 py-1 text-nowrap",
       colorPresets[color as keyof typeof colorPresets].color,
       disabled &&
         "opacity-50 pointer-events-none bg-transparent border-dashed border-gray/60",
       attrs.class as string,
+      title === "Vite" && "pr-6",
     ),
   ];
 });
@@ -50,7 +51,9 @@ const classes = computed(() => {
     </div>
     <div v-else flex="~ items-center gap-2">
       <img :src="icon" :class="iconClass" h-10 />
-      <div class="text-2xl">{{ title }}</div>
+      <div class="text-2xl" :class="title === 'Vite' ? 'mt-1' : ''">
+        {{ title }}
+      </div>
     </div>
   </div>
 </template>

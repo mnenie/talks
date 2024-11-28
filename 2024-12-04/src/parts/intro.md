@@ -80,17 +80,19 @@ layout: center
 ---
 
 <div transition transition-500 flex="~ items-center justify-center">
-  <h1 class="!text-5xl !mb-12">?</h1>
+  <h1 class="!text-5xl">?</h1>
 </div>
 
-<div transition transition-500 text-xl font-semibold mt--10>
-  <AlertCard color="green" absolute top-48 left-30>.vue</AlertCard>
-  <AlertCard color="green" absolute top-68 left-40>.ts</AlertCard>
-  <AlertCard color="green" absolute top-88 left-20>.svelte</AlertCard>
+<div transition transition-500 text-xl font-semibold mt--6>
+  <AlertCard color="green" class="absolute top-1/3 -translate-y-1/3 left-40">.vue</AlertCard>
+  <AlertCard color="green" class="absolute top-1/2 -translate-y-1/2 left-30">.ts</AlertCard>
+  <AlertCard color="green" class="absolute top-2/3 -translate-y-1/3 left-40">.svelte</AlertCard>
 
-  <AlertCard color="yellow" absolute top-68 right-64>.js</AlertCard>
-  <AlertCard color="yellow" absolute top-68 right-40>.html</AlertCard>
-  <AlertCard color="yellow" absolute top-68 right-20>.css</AlertCard>
+  <div class="absolute top-1/2 -translate-y-1/2 right-20 flex items-center gap-6">
+    <AlertCard color="yellow">.js</AlertCard>
+    <AlertCard color="yellow">.html</AlertCard>
+    <AlertCard color="yellow">.css</AlertCard>
+  </div>
 </div>
 
 ---

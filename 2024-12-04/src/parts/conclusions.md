@@ -2,7 +2,7 @@
 layout: center
 ---
 
-<img src="https://www.meme-arsenal.com/memes/1e87e22aba83015c2fff66110f546ef7.jpg" class="h-full" />
+<img src="/conclusion/1.jpg" class="h-full" />
 
 ---
 layout: center

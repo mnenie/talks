@@ -11,7 +11,7 @@ dragPos:
 slide: slide-purple
 ---
 
-<img src="https://vitejs.ru/logo-with-shadow.png" class="h-28" />
+<img src="/base/vite.png" class="h-32 mb-18" />
 
 
 <div>
