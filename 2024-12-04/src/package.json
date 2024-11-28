@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --out ../../.static/slides/2024_12_04-vite-2024 --base /talks/slides/2024_12_04-vite-2024/",
+    "build": "slidev build --out ../../-static/slides/2024-12-04 --base /talks/slides/2024-12-04/",
     "export": "slidev export --per-slide --output ../2024-12-04-vite-2024.pdf"
   }
 }
