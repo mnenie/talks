@@ -27,7 +27,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.static/slides/2024_12_04-vite-2024'
+          path: '.static'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
