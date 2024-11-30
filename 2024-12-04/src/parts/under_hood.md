@@ -1,14 +1,14 @@
 ---
 layout: center
 dragPos: 
-  a-1: 386,162,9,102,47
-  a-2: 490,175,9,102,0
-  a-3: 595,161,9,102,-47
+  a-1: 386,148,9,102,47
+  a-2: 490,162,9,102,0
+  a-3: 595,148,9,102,-47
 ---
 
 <TechnologyCard 
   title="Vite" 
-  icon="/base/vite.png" 
+  icon="../public/base/vite.png" 
   iconClass="h-12"
   class="!w-[210px] translate-y--30 !h-fit" 
 />
@@ -19,7 +19,7 @@ dragPos:
       v-click="1" 
       title="esbuild" 
       color="yellow" 
-      icon="/base/esbuild.png" 
+      icon="../public/base/esbuild.png" 
       iconClass="h-9"
       class="!w-fit" 
     />
@@ -48,7 +48,7 @@ dragPos:
       v-click="3" 
       title="SWC" 
       color="orange" 
-      icon="/base/swc.png" 
+      icon="../public/base/swc.png" 
       iconClass="h-5"
       class="!w-fit" 
     />
@@ -60,13 +60,13 @@ dragPos:
 </div>
 
 <div v-click="1" v-drag="'a-1'">
-  <SharedArrow inert x1="435" y1="320" x2="435" y2="114" stroke="dashed" color="#fde047" />
+  <SharedArrow inert x1="435" y1="344" x2="435" y2="114" stroke="dashed" color="#fde047" />
 </div>
 
 <div v-click="2" v-drag="'a-2'">
-  <SharedArrow inert x1="435" y1="256" x2="435" y2="114" stroke="dashed" color="#fca5a5" />
+  <SharedArrow inert x1="435" y1="274" x2="435" y2="114" stroke="dashed" color="#fca5a5" />
 </div>
 
 <div v-click="3" v-drag="'a-3'">
-  <SharedArrow inert x1="435" y1="320" x2="435" y2="114" stroke="dashed" color="#fdba74" />
+  <SharedArrow inert x1="435" y1="344" x2="435" y2="114" stroke="dashed" color="#fdba74" />
 </div>

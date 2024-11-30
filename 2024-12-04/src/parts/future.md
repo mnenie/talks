@@ -9,9 +9,9 @@ layout: statement
 ---
 layout: center
 dragPos: 
-  a-1: 386,162,9,102,47
-  a-2: 490,175,9,102,0
-  a-3: 595,161,9,102,-47
+  a-1: 386,148,9,102,47
+  a-2: 490,162,9,102,0
+  a-3: 595,148,9,102,-47
 ---
 
 <TechnologyCard 
@@ -28,7 +28,7 @@ dragPos:
       title="esbuild" 
       color="yellow" 
       :disabled="$clicks >= 3"
-      icon="/base/esbuild.png" 
+      icon="../public/base/esbuild.png" 
       iconClass="h-9"
       class="!w-fit" 
     />
@@ -54,7 +54,7 @@ dragPos:
     <TechnologyCard 
       title="SWC" 
       color="orange"
-      icon="/base/swc.png" 
+      icon="../public/base/swc.png" 
       iconClass="h-5"
       class="!w-fit" 
       :disabled="$clicks >= 1 && $clicks < 5"
@@ -66,15 +66,15 @@ dragPos:
 </div>
 
 <div v-drag="'a-1'">
-  <SharedArrow inert x1="435" y1="314" x2="435" y2="114" stroke="dashed" :color="$clicks >=3 ? '#2b2b2b' : '#fde047'" />
+  <SharedArrow inert x1="435" y1="344" x2="435" y2="114" stroke="dashed" :color="$clicks >=3 ? '#2b2b2b' : '#fde047'" />
 </div>
 
 <div v-drag="'a-2'">
-  <SharedArrow inert x1="435" y1="252" x2="435" y2="114" stroke="dashed" :color="($clicks >= 1 && $clicks < 3) || $clicks > 4 ? '#2b2b2b' : '#fca5a5'" />
+  <SharedArrow inert x1="435" y1="274" x2="435" y2="114" stroke="dashed" :color="($clicks >= 1 && $clicks < 3) || $clicks > 4 ? '#2b2b2b' : '#fca5a5'" />
 </div>
 
 <div v-drag="'a-3'">
-  <SharedArrow inert x1="435" y1="314" x2="435" y2="114" stroke="dashed" :color="$clicks >= 1 && $clicks < 5 ? '#2b2b2b' : '#fdba74'" />
+  <SharedArrow inert x1="435" y1="344" x2="435" y2="114" stroke="dashed" :color="$clicks >= 1 && $clicks < 5 ? '#2b2b2b' : '#fdba74'" />
 </div>
 
 
@@ -90,7 +90,7 @@ layout: center
 ---
 
 <div flex="~ items-center justify-center gap-6">
-  <img src="/base/rolldown.png" h-16 />
+  <img src="../public/base/rolldown.png" h-16 />
   <h1 class="!text-5xl mt-4">Rolldown</h1>
 </div>
 
@@ -98,21 +98,21 @@ layout: center
 ---
 layout: center
 dragPos:
-  a-1: 488,154,9,102,0
-  a-2: 488,307,9,102,0
+  a-1: 488,136,9,102,0
+  a-2: 488,310,9,102,0
 ---
 
 <div class="flex flex-col gap-30">
   <TechnologyCard 
     title="Vite" 
-    icon="/base/vite.png"
+    icon="../public/base/vite.png"
     iconClass="h-12 my-1" 
     class="!w-[200px] !h-fit flex items-center justify-center pl-2" 
   />
   <TechnologyCard
     v-click="1" 
     title="Rolldown" 
-    icon="/base/rolldown.png" 
+    icon="../public/base/rolldown.png" 
     color="yellow" 
     iconClass="h-8 my-1"
     class="!w-[200px] flex items-center justify-center" 
@@ -120,18 +120,18 @@ dragPos:
   <TechnologyCard 
     v-click="2"
     title="OXC" 
-    icon="/base/oxc.svg" 
+    icon="../public/base/oxc.svg" 
     color="blue" 
     class="!w-[200px] flex items-center justify-center pl-2" 
   />
 </div>
 
 <div v-drag="'a-1'" v-click="1" >
-  <SharedArrow inert x1="435" y1="214" x2="435" y2="114" stroke="dashed" color="#fde047" />
+  <SharedArrow inert x1="435" y1="234" x2="435" y2="114" stroke="dashed" color="#fde047" />
 </div>
 
 <div v-drag="'a-2'" v-click="2" >
-  <SharedArrow inert x1="435" y1="214" x2="435" y2="114" stroke="dashed" color="#60a5fa" />
+  <SharedArrow inert x1="435" y1="234" x2="435" y2="114" stroke="dashed" color="#60a5fa" />
 </div>
 
 
