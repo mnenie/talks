@@ -8,7 +8,7 @@ dragPos:
 
 <TechnologyCard 
   title="Vite" 
-  icon="../public/base/vite.png" 
+  icon="../shared/vite.png" 
   iconClass="h-12"
   class="!w-[210px] translate-y--30 !h-fit" 
 />
@@ -19,7 +19,7 @@ dragPos:
       v-click="1" 
       title="esbuild" 
       color="yellow" 
-      icon="../public/base/esbuild.png" 
+      icon="../shared/esbuild.png" 
       iconClass="h-9"
       class="!w-fit" 
     />
@@ -34,7 +34,7 @@ dragPos:
       v-click="2" 
       title="Rollup" 
       color="red" 
-      icon="https://seeklogo.com/images/R/rollup-js-logo-F3925E2546-seeklogo.com.png" 
+      icon="../shared/rollup.png" 
       class="!w-fit" 
     />
     <ul v-click="5" absolute mt-18 text-sm whitespace-nowrap>
@@ -48,7 +48,7 @@ dragPos:
       v-click="3" 
       title="SWC" 
       color="orange" 
-      icon="../public/base/swc.png" 
+      icon="../shared/swc.png" 
       iconClass="h-5"
       class="!w-fit" 
     />

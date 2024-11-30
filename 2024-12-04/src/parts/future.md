@@ -28,7 +28,7 @@ dragPos:
       title="esbuild" 
       color="yellow" 
       :disabled="$clicks >= 3"
-      icon="../public/base/esbuild.png" 
+      icon="../shared/esbuild.png" 
       iconClass="h-9"
       class="!w-fit" 
     />
@@ -42,7 +42,7 @@ dragPos:
     <TechnologyCard 
       title="Rollup" 
       color="red" 
-      icon="https://seeklogo.com/images/R/rollup-js-logo-F3925E2546-seeklogo.com.png" 
+      icon="../shared/rollup.png" 
       :disabled="($clicks >= 1 && $clicks < 3) || $clicks > 4"
       class="!w-fit" 
     />
@@ -54,7 +54,7 @@ dragPos:
     <TechnologyCard 
       title="SWC" 
       color="orange"
-      icon="../public/base/swc.png" 
+      icon="../shared/swc.png" 
       iconClass="h-5"
       class="!w-fit" 
       :disabled="$clicks >= 1 && $clicks < 5"
@@ -105,14 +105,14 @@ dragPos:
 <div class="flex flex-col gap-30">
   <TechnologyCard 
     title="Vite" 
-    icon="../public/base/vite.png"
+    icon="../shared/vite.png"
     iconClass="h-12 my-1" 
     class="!w-[200px] !h-fit flex items-center justify-center pl-2" 
   />
   <TechnologyCard
     v-click="1" 
     title="Rolldown" 
-    icon="../public/base/rolldown.png" 
+    icon="../shared/rolldown.png" 
     color="yellow" 
     iconClass="h-8 my-1"
     class="!w-[200px] flex items-center justify-center" 
@@ -120,7 +120,7 @@ dragPos:
   <TechnologyCard 
     v-click="2"
     title="OXC" 
-    icon="../public/base/oxc.svg" 
+    icon="../shared/oxc.svg" 
     color="blue" 
     class="!w-[200px] flex items-center justify-center pl-2" 
   />
