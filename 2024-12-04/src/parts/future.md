@@ -16,7 +16,7 @@ dragPos:
 
 <TechnologyCard 
   title="Vite" 
-  icon="/base/vite.png" 
+  icon="../shared/vite.png" 
   iconClass="h-12"
   class="!w-[210px] translate-y--30 !h-fit" 
   :disabled="$clicks >= 1" 
@@ -90,7 +90,7 @@ layout: center
 ---
 
 <div flex="~ items-center justify-center gap-6">
-  <img src="../public/base/rolldown.png" h-16 />
+  <img src="../shared/rolldown.png" h-16 />
   <h1 class="!text-5xl mt-4">Rolldown</h1>
 </div>
 

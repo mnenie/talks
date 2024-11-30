@@ -11,7 +11,7 @@ dragPos:
 slide: slide-purple
 ---
 
-<img src="/base/vite.png" class="h-32 mb-18" />
+<img src="../shared/vite.png" class="h-32 mb-18" />
 
 
 <div>
