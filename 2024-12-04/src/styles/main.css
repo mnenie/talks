@@ -19,13 +19,7 @@ h6 {
 }
 
 .fade-out-enter-active {
-    transition-delay: calc(var(--slidev-transition-duration) * 0.8);
-}
-
-.fade-out-enter-from,
-.fade-out-leave-to {
-    opacity: 0;
-    filter: blur(5px);
+    transition-delay: calc(var(--slidev-transition-duration) * 0.6);
 }
 
 .slidev-vclick-target {
