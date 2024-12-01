@@ -16,11 +16,11 @@ dragPos:
 
 <TechnologyCard 
   title="Vite" 
-  icon="../shared/vite.png" 
-  iconClass="h-12"
   class="!w-[210px] translate-y--30 !h-fit" 
   :disabled="$clicks >= 1" 
-/>
+>
+  <img src="../shared/vite.png" h-12 />
+</TechnologyCard>
 
 <div flex="~ gap-30 items-center" class="translate-y-10">
   <div class="flex flex-col" relative>
@@ -28,10 +28,10 @@ dragPos:
       title="esbuild" 
       color="yellow" 
       :disabled="$clicks >= 3"
-      icon="../shared/esbuild.png" 
-      iconClass="h-9"
       class="!w-fit" 
-    />
+    >
+      <img src="../shared/esbuild.png" h-9 />
+    </TechnologyCard>
     <ul v-click="2" absolute mt-18 text-sm whitespace-nowrap>
       <li>Ограниченный контроль <br/> чанков и тришейкинга</li>
       <li>Ограниченная гибкость</li>
@@ -42,10 +42,11 @@ dragPos:
     <TechnologyCard 
       title="Rollup" 
       color="red" 
-      icon="../shared/rollup.png" 
       :disabled="($clicks >= 1 && $clicks < 3) || $clicks > 4"
       class="!w-fit" 
-    />
+    >
+      <img src="../shared/rollup.png" h-9 />
+    </TechnologyCard>
     <ul v-click="4" absolute mt-18 text-sm whitespace-nowrap>
       <li>Медленная скорость сборки <br /> по сравнению с нативной</li>
     </ul>
@@ -54,11 +55,11 @@ dragPos:
     <TechnologyCard 
       title="SWC" 
       color="orange"
-      icon="../shared/swc.png" 
-      iconClass="h-5"
       class="!w-fit" 
       :disabled="$clicks >= 1 && $clicks < 5"
-    />
+    >
+      <img src="../shared/swc.png" h-5 />
+    </TechnologyCard>
     <ul v-click="6" absolute mt-18 text-sm whitespace-nowrap>
       <li>Большой размер бинарника</li>
     </ul>
@@ -105,25 +106,26 @@ dragPos:
 <div class="flex flex-col gap-30">
   <TechnologyCard 
     title="Vite" 
-    icon="../shared/vite.png"
-    iconClass="h-12 my-1" 
     class="!w-[200px] !h-fit flex items-center justify-center pl-2" 
-  />
+  >
+    <img src="../shared/vite.png" h-12 my-1 />
+  </TechnologyCard>
   <TechnologyCard
     v-click="1" 
     title="Rolldown" 
-    icon="../shared/rolldown.png" 
     color="yellow" 
-    iconClass="h-8 my-1"
     class="!w-[200px] flex items-center justify-center" 
-  />
+  >
+    <img src="../shared/rolldown.png" h-8 my-1 />
+  </TechnologyCard>
   <TechnologyCard 
     v-click="2"
     title="OXC" 
-    icon="../shared/oxc.svg" 
     color="blue" 
     class="!w-[200px] flex items-center justify-center pl-2" 
-  />
+  >
+    <img src="../shared/oxc.svg" h-10 />
+  </TechnologyCard>
 </div>
 
 <div v-drag="'a-1'" v-click="1" >

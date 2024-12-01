@@ -3,10 +3,8 @@ import { twMerge } from "tailwind-merge";
 import { computed, useAttrs } from "vue";
 interface AlertProps {
   color?: "purple" | "red" | "yellow" | "orange" | "blue";
-  icon: string;
   title: string;
   disabled?: boolean;
-  iconClass?: string;
 }
 const { color = "purple", disabled = false, title } = defineProps<AlertProps>();
 
@@ -46,11 +44,8 @@ const classes = computed(() => {
 
 <template>
   <div :class="classes">
-    <div v-if="$slots.default">
+    <div flex="~ items-center gap-2">
       <slot />
-    </div>
-    <div v-else flex="~ items-center gap-2">
-      <img :src="icon" :class="iconClass" h-10 />
       <div class="text-2xl" :class="title === 'Vite' ? 'mt-1' : ''">
         {{ title }}
       </div>

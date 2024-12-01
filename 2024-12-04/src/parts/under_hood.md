@@ -8,10 +8,10 @@ dragPos:
 
 <TechnologyCard 
   title="Vite" 
-  icon="../shared/vite.png" 
-  iconClass="h-12"
   class="!w-[210px] translate-y--30 !h-fit" 
-/>
+>
+  <img src="../shared/vite.png" h-12 />
+</TechnologyCard>
 
 <div flex="~ gap-30 items-center" class="translate-y-10">
   <div class="flex flex-col" relative>
@@ -19,10 +19,10 @@ dragPos:
       v-click="1" 
       title="esbuild" 
       color="yellow" 
-      icon="../shared/esbuild.png" 
-      iconClass="h-9"
       class="!w-fit" 
-    />
+    >
+      <img src="../shared/esbuild.png" h-9 />
+    </TechnologyCard>
     <ul v-click="4" absolute mt-18 text-sm>
       <li>Pre-bundling</li>
       <li>Трансформация</li>
@@ -34,9 +34,10 @@ dragPos:
       v-click="2" 
       title="Rollup" 
       color="red" 
-      icon="../shared/rollup.png" 
       class="!w-fit" 
-    />
+    >
+      <img src="../shared/rollup.png" h-9 />
+    </TechnologyCard>
     <ul v-click="5" absolute mt-18 text-sm whitespace-nowrap>
       <li>Продашен бандлинг</li>
       <li>Контроль чанков</li>
@@ -48,10 +49,10 @@ dragPos:
       v-click="3" 
       title="SWC" 
       color="orange" 
-      icon="../shared/swc.png" 
-      iconClass="h-5"
       class="!w-fit" 
-    />
+    >
+      <img src="../shared/swc.png" h-5 />
+    </TechnologyCard>
     <ul v-click="6" absolute mt-18 text-sm whitespace-nowrap>
       <li>React refresh</li>
       <li>Трансформация JSX/TSX</li>
