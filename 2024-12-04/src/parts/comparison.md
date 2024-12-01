@@ -17,7 +17,7 @@ dragPos:
 
   <img v-drag="'n'" v-click="2" src="/base/next.png" class="!h-18 !w-18" />
   <img v-drag="'v-1'" v-click="2" src="/base/vue.webp" class="!h-18 !w-17" />
-  <img v-drag="'v-2'" v-click="2" src="/base/react.png" class="!h-17 !w-18" />
+  <img v-drag="'v-2'" v-click="2" src="/base/react.png" class="!h-17 !w-[72px]" />
   <img v-drag="'v-3'" v-click="2" src="/base/svelte.png" class="!h-18 !w-14" />
   <p v-drag="'v-4'" v-click="2" text-sm whitespace-nowrap>и еще много других</p>
 </div>
