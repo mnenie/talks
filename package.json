@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "pnpm clean && pnpm -r run build",
+    "build:gh-pages": "pnpm clean && pnpm -r run build:gh-pages",
     "dev": "tsx scripts/picker.ts dev --open",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
