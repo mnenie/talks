@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /unocss-2025-05-27/ --out ../../dist/unocss-2025-05-2",
+    "build": "slidev build --base /unocss-2025/ --out ../../dist/unocss-2025",
     "build:gh-pages": "slidev build --out ../../.static/slides/2025-05-27 --base /talks/slides/2025-05-27/",
-    "export": "slidev export --per-slide --output ../unocss-2025-05-27.pdf"
+    "export": "slidev export --per-slide --output ../2025-05-27-unocss-2025.pdf"
   }
 }
