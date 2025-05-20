@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /unocss-2025-05-27/ --out ../../dist/unocss-2025-05-2",
+    "build:gh-pages": "slidev build --out ../../.static/slides/2025-05-27 --base /talks/slides/2025-05-27/",
+    "export": "slidev export --per-slide --output ../unocss-2025-05-27.pdf"
+  }
+}
