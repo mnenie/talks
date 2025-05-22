@@ -8,13 +8,13 @@ css: unocss
 colorSchema: dark
 transition: fade-out
 mdc: true
-title: 'UnoCSS - атомарный CSS без боли'
+title: 'ESM-only: как теперь пишем модули'
 remoteAssets: true
 ---
 
-# UnoCSS - атомарный CSS без боли {.font-600!}
+# ESM-only: как теперь пишем модули {.font-600!}
 
-<p text-2xl mt--1 op50>Как стили работают быстрее, чем вы успеваете моргнуть</p>
+<p text-2xl mt--1 op50>Эволюция без боли (ну почти)</p>
 
 <div abs-br mx-10 my-6 flex="~ col" text-sm text-right> 
   <div text-sm opacity-60>Пешков Александр</div>
@@ -26,4 +26,8 @@ remoteAssets: true
 
 ---
 src: ./parts/intro.md
+---
+
+---
+src: ./parts/history.md
 ---

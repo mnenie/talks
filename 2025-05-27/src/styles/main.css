@@ -41,3 +41,8 @@ h6 {
   color: var(--bg-key);
   background: none;
 }
+
+.slidev-layout :not(pre) > code {
+  background-color: transparent;
+  color: #fff
+}
