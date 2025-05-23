@@ -31,3 +31,27 @@ src: ./parts/intro.md
 ---
 src: ./parts/history.md
 ---
+
+---
+src: ./parts/definitions.md
+---
+
+---
+src: ./parts/interop.md
+---
+
+---
+src: ./parts/ways.md
+---
+
+---
+src: ./parts/dual-problems.md
+---
+
+---
+src: ./parts/esm-only.md
+---
+
+---
+src: ./parts/conclusion.md
+---
