@@ -3,7 +3,7 @@ layout: center
 ---
 
 <div transition transition-500 flex="~ items-center justify-center">
-   <h1>Так стоил ли нам переходить на ESM-only?</h1>
+   <h1>Так стоит ли нам переходить на ESM-only?</h1>
 </div>
 
 ---
