@@ -6,6 +6,6 @@
     "dev": "slidev",
     "build": "slidev build --base /esm-2025/ --out ../../dist/esm-2025",
     "build:gh-pages": "slidev build --out ../../.static/slides/2025-05-27 --base /talks/slides/2025-05-27/",
-    "export": "slidev export --output ../2025-05-27-esm-2025.pdf"
+    "export": "slidev export --per-slide --output ../2025-05-27-esm-2025.pdf"
   }
 }
