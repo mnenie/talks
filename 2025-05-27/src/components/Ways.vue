@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useSlideContext } from "@slidev/client";
 
-// Made by @LittleSound. Thanks to her!
 const { $clicks } = useSlideContext();
 </script>
 

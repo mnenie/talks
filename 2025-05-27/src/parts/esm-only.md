@@ -10,6 +10,18 @@ layout: cover
   <div v-click absolute top-80 left-85>Поддержка Node.js</div>
 </div>
 
+<!--
+Современные библиотеки (vite, meta фреймворки) пишутся только на ESM
+Полный отказ от require() и module.exports
+
+Нативная поддержка в <script type="module">
+Лучший tree-shaking и оптимизация загрузки
+
+esbuild, rollup, tsup уже работают в ESM-режиме
+Меньше преобразований - выше скорость
+
+В LTS-версиях — полная готовность для продакшена -->
+
 ---
 layout: cover
 ---
