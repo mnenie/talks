@@ -2,7 +2,7 @@ import config from "@slidev/client/uno.config";
 import { mergeConfigs } from "unocss";
 
 const variants = {
-  core: "[--bg-key:#5a8f29] [--bg-f-grad:#49ff3c] [--bg-s-grad:#4cc580] [--bg-t-grad:#ceff1d]",
+  core: "[--bg-key:#0099ff] [--bg-f-grad:#0099ff] [--bg-s-grad:#4cbbc5] [--bg-t-grad:#5d1dff]",
 } as const;
 
 export default mergeConfigs([
