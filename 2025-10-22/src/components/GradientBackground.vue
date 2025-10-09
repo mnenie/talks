@@ -2,19 +2,18 @@
 import { useNav } from "@slidev/client";
 import seedrandom from "seedrandom";
 /**
- * A new grow effect system powered by blured polygons
+ * A new glow effect system powered by blured polygons
  *
- * Credits to @pi0 @Atinux @antfu
+ * Credits to @pi0 @Atinux
  *
  * Properties:
- * - grow: 'left' | 'right' | 'top' | 'bottom' | 'full' -  Distribution of the polygons points
- * - growOpacity: number - Opacity of the polygons (4)
- * - growHue: number - Hue shift for the polygons (default: 0)
- * - growSeed: string | false - Seed for the stable random distribution (default: 'default')
+ * - glow: 'left' | 'right' | 'top' | 'bottom' | 'full' -  Distribution of the polygons points
+ * - glowOpacity: number - Opacity of the polygons (4)
+ * - glowHue: number - Hue shift for the polygons (default: 0)
+ * - glowSeed: string | false - Seed for the stable random distribution (default: 'default')
  */
 import { computed, ref, watch } from "vue";
 
-const colors = ["from-[#42B883]", "from-[#35495E]", "from-[#5468ff]"];
 const { currentSlideRoute } = useNav();
 
 export type Range = [number, number];
@@ -31,19 +30,18 @@ export type Distribution =
   | "bottom-right"
   | "center";
 
-const frontmatter = computed(
+const formatter = computed(
   () => (currentSlideRoute.value.meta?.slide as any)?.frontmatter || {},
 );
 const distribution = computed(
-  () => (frontmatter.value.grow || "full") as Distribution,
+  () => (formatter.value.glow || "full") as Distribution,
 );
-const hide = computed(() => frontmatter.value.growHide === "true");
-const opacity = computed<number>(() => +(frontmatter.value.growOpacity || 0.4));
-const hue = computed<number>(() => +(frontmatter.value.growHue || 0));
+const opacity = computed<number>(() => +(formatter.value.glowOpacity || 0.4));
+const hue = computed<number>(() => +(formatter.value.glowHue || 0));
 const seed = computed<string>(() =>
-  frontmatter.value.growSeed === "false" || frontmatter.value.growSeed === false
+  formatter.value.glowSeed === "false" || formatter.value.glowSeed === false
     ? Date.now().toString()
-    : frontmatter.value.growSeed || "default",
+    : formatter.value.glowSeed || "default",
 );
 const overflow = 0.3;
 const disturb = 0.3;
@@ -157,26 +155,32 @@ const poly3 = usePloy(3);
 <template>
   <div
     class="bg pointer-events-none transform-gpu overflow-hidden"
-    :style="{
-      filter: `blur(70px) hue-rotate(${hue}deg)`,
-      opacity: hide ? 0 : 1,
-    }"
+    :style="{ filter: `blur(70px) hue-rotate(${hue}deg)` }"
     aria-hidden="true"
   >
     <div
-      class="clip to-white/10 bg-gradient-to-r"
-      :class="colors[0]"
-      :style="{ 'clip-path': `polygon(${poly1})`, opacity }"
+      class="clip"
+      :style="{
+        'clip-path': `polygon(${poly1})`,
+        opacity,
+        'background-image': `linear-gradient(to right, var(--bg-f-grad) 0%, #FFFFFF10 100%)`,
+      }"
     />
     <div
-      class="clip to-white/10 bg-gradient-to-l"
-      :class="colors[1]"
-      :style="{ 'clip-path': `polygon(${poly2})`, opacity }"
+      class="clip"
+      :style="{
+        'clip-path': `polygon(${poly2})`,
+        opacity,
+        'background-image': `linear-gradient(to right, var(--bg-s-grad) 0%, #FFFFFF10 100%)`,
+      }"
     />
     <div
-      class="clip to-white/10 bg-gradient-to-t"
-      :class="colors[2]"
-      :style="{ 'clip-path': `polygon(${poly3})`, opacity: 0.2 }"
+      class="clip"
+      :style="{
+        'clip-path': `polygon(${poly3})`,
+        opacity: 0.2,
+        'background-image': `linear-gradient(to right, var(--bg-t-grad) 0%, #FFFFFF10 100%)`,
+      }"
     />
   </div>
 </template>
