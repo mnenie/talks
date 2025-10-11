@@ -13,13 +13,30 @@ h6 {
   background: #000 !important;
 }
 
+.card-hidden {
+    @apply pointer-events-none;
+    --un-blur: blur(10px);
+    --un-scale-x: 0;
+    --un-scale-y: 0;
+}
+
+.card-blur-hidden {
+    @apply pointer-events-none filter-blur-[10px] opacity-0;
+}
 
 .fade-out-leave-active {
     transition: opacity calc(var(--slidev-transition-duration) * 0.6) ease-out, filter 200ms ease;
 }
 
 .fade-out-enter-active {
+    transition: opacity calc(var(--slidev-transition-duration) * 0.8) ease-in, filter 200ms ease;
     transition-delay: calc(var(--slidev-transition-duration) * 0.6);
+}
+
+.fade-out-enter-from,
+.fade-out-leave-to {
+    opacity: 0;
+    filter: blur(5px);
 }
 
 .slidev-vclick-target {
