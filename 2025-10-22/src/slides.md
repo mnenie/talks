@@ -19,3 +19,7 @@ remoteAssets: true
 ---
 src: ./parts/intro.md
 ---
+
+---
+src: ./parts/reactivity.md
+---
