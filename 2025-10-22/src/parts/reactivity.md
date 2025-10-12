@@ -68,7 +68,7 @@ layout: cover
 layout: cover
 dragPos:
   vue: 200,230,100,100
-clicks: 4
+clicks: 3
 ---
 
 <svg v-drag="'vue'" absolute top-0 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196.32 170.02">

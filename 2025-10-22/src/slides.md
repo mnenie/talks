@@ -23,3 +23,7 @@ src: ./parts/intro.md
 ---
 src: ./parts/reactivity.md
 ---
+
+---
+src: ./parts/effects.md
+---
