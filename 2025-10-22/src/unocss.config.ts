@@ -19,7 +19,7 @@ export default mergeConfigs([
           "text-transparent bg-clip-text bg-gradient-to-tl from-green-400 via-teal-400 to-blue-500",
         "slide-main": "slide-core",
         "config-prs":
-          "absolute -translate-x-1/2 -translate-y-1/2 transform-origin-center duration-200 ease-in-out filter",
+          "absolute -translate-x-1/2 -translate-y-1/2 transform-all duration-200 ease-in-out filter",
       },
       [
         /^position-(\S+)_(\S+)$/,

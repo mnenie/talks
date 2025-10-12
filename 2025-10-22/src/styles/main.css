@@ -13,11 +13,19 @@ h6 {
   background: #000 !important;
 }
 
-.card-hidden {
-    @apply pointer-events-none;
+.prms-hidden {
+    @apply pointer-events-none hidden;
     --un-blur: blur(10px);
     --un-scale-x: 0;
     --un-scale-y: 0;
+}
+
+svg {
+  opacity: 0.9;
+}
+
+svg > line {
+    stroke-width: 1.6 !important;
 }
 
 .card-blur-hidden {
