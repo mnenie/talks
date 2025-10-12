@@ -87,22 +87,6 @@ dragPos:
   customRef: 'opacity-50 scale-50 blur-2',
   effect: '',
   dep: '',
-}, {
-  opacityClass: 'opacity-60',
-  ref: 'opacity-0 scale-0',
-  computed: 'opacity-0 scale-0',
-  reactive: 'opacity-0 scale-0',
-  props: 'opacity-0 scale-0',
-  watch: 'opacity-0 scale-0',
-  watchEffect: 'opacity-0 scale-0',
-  vModel: 'opacity-0 scale-0',
-  effectScope: 'opacity-0 scale-0',
-  customRef: 'opacity-0 scale-0',
-  shallowRef: 'opacity-0 scale-0',
-  shallowReactive: 'opacity-0 scale-0',
-  readonly: 'opacity-0 scale-0',
-  effect: 'opacity-0 scale-0',
-  dep: 'opacity-0 scale-0',
 }]" v-slot="config">
   <AtomCard class="position-300_110" :class="config.ref" title="ref" />
   <AtomCard class="position-200_320" :class="config.computed" title="computed" />
@@ -120,3 +104,9 @@ dragPos:
   <AtomCard class="position-802_259" :class="config.effect" title="effect" />
   <AtomCard class="position-208_408" :class="config.dep" title="Dep" />
 </Stepper>
+
+---
+layout: center
+---
+
+<img src="/dont-understand.jpg" w-110 />
