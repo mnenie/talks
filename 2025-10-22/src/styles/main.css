@@ -20,6 +20,11 @@ h6 {
     --un-scale-y: 0;
 }
 
+.slidev-layout li {
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
 svg {
   opacity: 0.9;
 }
