@@ -1,24 +1,20 @@
 <script setup lang="ts">
-import { useNav } from "@slidev/client";
 import { twMerge, type ClassNameValue } from "tailwind-merge";
-import { computed, ref, watch } from "vue";
+import { computed, nextTick, ref, watch } from "vue";
 
 const {
   duration = 0.7,
   filter = true,
-  index,
-  words,
+  ...props
 } = defineProps<{
   words: string;
   filter?: boolean;
   duration?: number;
-  index: number;
+  index?: number;
 }>();
 
-const nav = useNav();
-
 const scope = ref(null);
-const wordsArray = computed(() => words.split(" "));
+const wordsArray = computed(() => props.words.split(" "));
 
 const headingStyle = computed(() => ({
   opacity: 0,
@@ -44,7 +40,7 @@ const startAnimation = () => {
 
 const stopAnimation = () => {
   if (scope.value) {
-    const spans = (scope.value as HTMLElement).querySelectorAll("h1");
+    const spans = (scope.value as HTMLElement).querySelectorAll("span");
     spans.forEach((span: HTMLElement) => {
       span.style.opacity = "0";
     });
@@ -52,13 +48,14 @@ const stopAnimation = () => {
 };
 
 watch(
-  () => nav.clicks.value,
-  (newClickValue) => {
-    if (newClickValue === index) {
+  () => props.index,
+  async (newValue, oldValue) => {
+    await nextTick(() => {
+      if (newValue! > oldValue!) {
+        stopAnimation();
+      }
       startAnimation();
-    } else if (newClickValue > index) {
-      stopAnimation();
-    }
+    });
   },
   {
     immediate: true,
@@ -69,7 +66,6 @@ watch(
 
 <template>
   <div
-    v-show="nav.clicks.value === index"
     :class="
       twMerge('leading-snug tracking-wide', $attrs.class as ClassNameValue)
     "
