@@ -47,20 +47,20 @@ layout: cover
   </div>
   <div>
     <AtomCard class="position-600_220" :class="config.subscribers" title="Subscribers" />
-    <Arrow x1="452" y1="220" x2="514" y2="220" :class="config.arrowState" />
+    <SvgArrow x1="452" y1="220" x2="514" y2="220" :class="config.arrowState" />
   </div>
   <div>
     <AtomCard class="position-800_320" :class="config.effects" title="Effects" />
-    <Arrow x1="682" y1="226" x2="760" y2="282" :class="config.arrowSubscribers" />
+    <SvgArrow x1="682" y1="226" x2="760" y2="282" :class="config.arrowSubscribers" />
   </div>
   <div>
     <AtomCard class="position-200_220" :class="config.irritant" color="purple" />
-    <Arrow x1="236" y1="220" x2="340" y2="220" :class="config.arrowIrritant" />
+    <SvgArrow x1="236" y1="220" x2="340" y2="220" :class="config.arrowIrritant" />
   </div>
   <div>
     <AtomCard class="position-510_420" :class="config.scheduler" title="Scheduler" color="purple" />
-    <Arrow x1="500" y1="384" x2="420" y2="260" :class="config.arrowSchedulerState" />
-    <Arrow x1="736" y1="330" x2="590" y2="400" :class="config.arrowSchedulerEffects" />
+    <SvgArrow x1="500" y1="384" x2="420" y2="260" :class="config.arrowSchedulerState" />
+    <SvgArrow x1="736" y1="330" x2="590" y2="400" :class="config.arrowSchedulerEffects" />
   </div>
 </Stepper>
 
