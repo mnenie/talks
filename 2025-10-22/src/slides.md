@@ -33,5 +33,5 @@ src: ./parts/about_tracks.md
 ---
 
 ---
-src: ./parts/dependencies.md
+src: ./parts/all_atoms.md
 ---
