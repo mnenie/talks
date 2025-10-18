@@ -31,3 +31,7 @@ src: ./parts/effects.md
 ---
 src: ./parts/about_tracks.md
 ---
+
+---
+src: ./parts/dependencies.md
+---
