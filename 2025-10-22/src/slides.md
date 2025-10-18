@@ -33,5 +33,5 @@ src: ./parts/about_tracks.md
 ---
 
 ---
-src: ./parts/all_atoms.md
+src: ./parts/before_scheduler.md
 ---
