@@ -81,15 +81,16 @@ topTitleClass: top-100px left-20
 class: 'ml10'
 ---
 
-<div grid="~ cols-2 gap-8" mt22>
+<div grid="~ cols-2 gap-8" mt26>
 
-<div>
+<div :class="{'translate-y-14 transition duration-400': $clicks >= 4}">
 
 <v-clicks>
 
 - Работает на основе Proxy с Reflect
 - Автоматически развернет все ref
 - Вложенные объекты обернет так же в reactive
+- Имеет реализации в shallowReactive / readonly / shallowReadonly
 
 </v-clicks>
 
@@ -128,6 +129,46 @@ const obj = reactive({
   },
 })
 console.log(isReactive(obj))
+```
+
+```ts
+const obj = shallowReactive({
+  a: {
+    a_nested: 'a_nested'
+  },
+  b:{
+    b_nested: 'b_nested'
+  }
+})
+const title = computed(
+  () => `${obj.a.a_nested} and ${obj.b.b_nested}`
+)
+
+console.log(title.value) // a_nested and b_nested
+
+obj.a.a_nested = 'test'
+console.log(title.value) // a_nested and b_nested
+```
+
+```ts
+const obj = readonly({
+  a: {
+    a_nested: 'a_nested'
+  },
+  b:{
+    b_nested: 'b_nested'
+  }
+})
+const title = computed(
+  () => `${obj.a.a_nested} and ${obj.b.b_nested}`
+)
+
+console.log(title.value) // from a_nested and b_nested
+
+obj.a.a_nested = 'test' 
+// 'a_nested' is a read-only property.
+
+console.log(title.value)
 ```
 
 ````
