@@ -256,3 +256,98 @@ console.log(title.value)
 ````
 
 </div>
+
+
+---
+layout: center
+topTitle: Computed
+topTitleClass: top-220px transition-none left-1/2 text-5xl translate-x--1/2
+---
+
+---
+layout: center
+topTitle: Computed
+topTitleClass: top-100px left-20
+class: 'ml10'
+---
+
+<div grid="~ cols-2 gap-8" wfull mt26>
+
+<div>
+
+<v-clicks>
+
+- Работает по pull механике
+- Перерасчет только в момент вызова
+- Может быть writable
+- Использует возможности батчинга
+
+</v-clicks>
+
+</div>
+
+<div>
+
+````md magic-move {at:2}
+
+```ts
+class ComputedRefImpl<T> {
+  get value() {}
+  
+  set value(nv) {}
+
+  notify(): true | void {}
+  
+  private _value!: T
+  readonly dep!: Dep
+  public readonly [ReactiveFlags.IS_READONLY] = !setter
+}
+```
+
+```ts
+const a = ref(5)
+const comp = computed(() => a.value * 10)
+
+console.log(comp.value) // 50
+a.value = 1
+console.log(comp.value) // 10
+a.value = 2
+
+// нет подписчиков, никогда больше не будет перевычислен
+```
+
+```ts
+interface WritableComputedRef<T, S = T> 
+extends BaseComputedRef<T, S> {
+  [WritableComputedRefSymbol]: true
+}
+
+const comp = computed({
+  get() {
+    // ...
+  },
+  set(newVal) {
+    // ...
+  }
+})
+```
+
+```ts
+const a = ref(5)
+const comp = computed(() => a.value * 10)
+
+console.log(comp.value) // 50
+a.value = 1
+console.log(comp.value) // 10
+a.value = 2
+a.value = 3
+a.value = 4
+
+console.log(comp.value) // 40
+```
+
+````
+
+</div>
+
+</div>
