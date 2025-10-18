@@ -70,6 +70,56 @@ const a = ref({
 
 ---
 layout: center
+topTitle: shallowRef
+topTitleClass: top-220px left-1/2 text-5xl translate-x--1/2
+---
+
+---
+layout: center
+topTitle: shallowRef
+topTitleClass: top-100px left-1/2 translate-x--1/2
+---
+
+````md magic-move
+
+```ts
+class RefImpl {
+  constructor(value, isShallow) {
+    this.value = isShallow 
+      ? value
+      : toReactive(value)
+  }
+}
+```
+
+```ts
+const a = shallowRef({ 
+  nested: 1
+})
+const b = ref(2)
+const sum = computed(() => a.value.nested + b.value)
+
+console.log(sum.value) // 3
+a.value.nested= 5
+console.log(sum.value) // 3 (остается)
+```
+
+```ts
+const a = shallowRef({ 
+  nested: 1
+})
+const b = ref(2)
+const sum = computed(() => a.value.nested + b.value)
+
+console.log(sum.value) // 3
+a.value = { nested: 5 }
+console.log(sum.value) // 7
+```
+
+````
+
+---
+layout: center
 topTitle: Reactive
 topTitleClass: top-220px transition-none left-1/2 text-5xl translate-x--1/2
 ---
@@ -81,16 +131,15 @@ topTitleClass: top-100px left-20
 class: 'ml10'
 ---
 
-<div grid="~ cols-2 gap-8" mt26>
+<div grid="~ cols-2 gap-8" mt20>
 
-<div :class="{'translate-y-14 transition duration-400': $clicks >= 4}">
+<div>
 
 <v-clicks>
 
 - Работает на основе Proxy с Reflect
 - Автоматически развернет все ref
 - Вложенные объекты обернет так же в reactive
-- Имеет реализации в shallowReactive / readonly / shallowReadonly
 
 </v-clicks>
 
@@ -131,39 +180,72 @@ const obj = reactive({
 console.log(isReactive(obj))
 ```
 
+````
+
+</div>
+
+</div>
+
+---
+layout: center
+topTitle: shallowReactive
+topTitleClass: top-220px transition-none left-1/2 text-5xl translate-x--1/2
+---
+
+---
+layout: center
+topTitle: shallowReactive
+topTitleClass: top-100px left-1/2 translate-x--1/2
+---
+
+<div mt10>
+
+````md magic-move
+
 ```ts
 const obj = shallowReactive({
-  a: {
-    a_nested: 'a_nested'
-  },
-  b:{
-    b_nested: 'b_nested'
-  }
+  a: { a_nested: 'a_nested' },
+  b:{ b_nested: 'b_nested' }
 })
 const title = computed(
   () => `${obj.a.a_nested} and ${obj.b.b_nested}`
 )
-
 console.log(title.value) // a_nested and b_nested
 
 obj.a.a_nested = 'test'
 console.log(title.value) // a_nested and b_nested
 ```
 
+````
+
+</div>
+
+
+---
+layout: center
+topTitle: readonly
+topTitleClass: top-220px left-1/2 text-5xl translate-x--1/2
+---
+
+---
+layout: center
+topTitle: readonly
+topTitleClass: top-100px left-1/2 translate-x--1/2
+---
+
+<div mt10>
+
+````md magic-move
+
 ```ts
 const obj = readonly({
-  a: {
-    a_nested: 'a_nested'
-  },
-  b:{
-    b_nested: 'b_nested'
-  }
+  a: { a_nested: 'a_nested' },
+  b:{ b_nested: 'b_nested' }
 })
 const title = computed(
   () => `${obj.a.a_nested} and ${obj.b.b_nested}`
 )
-
-console.log(title.value) // from a_nested and b_nested
+console.log(title.value) // a_nested and b_nested
 
 obj.a.a_nested = 'test' 
 // 'a_nested' is a read-only property.
@@ -172,7 +254,5 @@ console.log(title.value)
 ```
 
 ````
-
-</div>
 
 </div>
