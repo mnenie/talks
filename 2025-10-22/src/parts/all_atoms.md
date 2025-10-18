@@ -67,3 +67,71 @@ const a = ref({
 </div>
 
 </div>
+
+---
+layout: center
+topTitle: Reactive
+topTitleClass: top-220px transition-none left-1/2 text-5xl translate-x--1/2
+---
+
+---
+layout: center
+topTitle: Reactive
+topTitleClass: top-100px left-20
+class: 'ml10'
+---
+
+<div grid="~ cols-2 gap-8" mt22>
+
+<div>
+
+<v-clicks>
+
+- Работает на основе Proxy с Reflect
+- Автоматически развернет все ref
+- Вложенные объекты обернет так же в reactive
+
+</v-clicks>
+
+</div>
+
+<div>
+
+````md magic-move {at:2}
+
+```ts
+new Proxy(_t, {
+  get(target, key, receiver) { 
+    // ... Reflect.get(...)
+  },
+  set(target, key, value, receiver) { 
+    // ... Reflect.set(...)
+  }
+  // ...
+})
+
+```
+
+```ts
+const a = ref(1);
+const b = ref('hello')
+
+const obj = reactive({ a, b })
+
+// Обращение идет через obj.a / obj.b
+```
+
+```ts
+const obj = reactive({
+  a: { 
+    b: 1 
+  },
+})
+console.log(isReactive(obj))
+```
+
+````
+
+</div>
+
+</div>
