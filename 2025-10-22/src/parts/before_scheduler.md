@@ -260,6 +260,95 @@ console.log(title.value)
 
 ---
 layout: center
+topTitle: ReactiveFlags
+topTitleClass: top-220px left-1/2 text-5xl translate-x--1/2
+---
+
+---
+layout: center
+topTitle: ReactiveFlags
+topTitleClass: top-100px left-1/2 translate-x--1/2
+---
+
+<div mt10>
+
+```ts {2|3|3|4|4|5|5|6|6}
+export enum ReactiveFlags {
+  SKIP = '__v_skip',
+  IS_REACTIVE = '__v_isReactive',
+  IS_READONLY = '__v_isReadonly',
+  IS_SHALLOW = '__v_isShallow',
+  RAW = '__v_raw',
+}
+```
+
+````md magic-move {at: 1}
+
+```ts
+import { ReactiveFlags } from 'vue'
+
+obj[ReactiveFlags.SKIP] = true
+```
+
+```ts {*|*}
+import { markRaw } from 'vue'
+
+markRaw(obj)
+```
+
+```ts
+import { isReactive } from 'vue'
+
+isReactive(data)
+```
+
+```ts
+import { readonly } from 'vue'
+
+readonly(data)
+```
+
+```ts
+import { isReadonly, readonly } from 'vue'
+
+readonly(data)
+isReadonly(data)
+```
+
+```ts
+import { shallowReactive, shallowReadonly } from 'vue'
+
+shallowReactive(data)
+shallowReadonly(data)
+```
+
+```ts
+import { shallowReactive, shallowReadonly } from 'vue'
+
+shallowReactive(data)
+shallowReadonly(data)
+```
+
+```ts
+import { ReactiveFlags } from 'vue'
+
+const r = reactive(data)
+console.log(r[ReactiveFlags.RAW] === data)
+```
+
+```ts
+import { toRaw } from 'vue'
+
+const r = reactive(data)
+console.log(toRaw(r) === data)
+```
+````
+
+</div>
+
+
+---
+layout: center
 topTitle: Computed
 topTitleClass: top-220px transition-none left-1/2 text-5xl translate-x--1/2
 ---
