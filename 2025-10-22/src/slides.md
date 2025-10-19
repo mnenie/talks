@@ -35,3 +35,7 @@ src: ./parts/about_tracks.md
 ---
 src: ./parts/before_scheduler.md
 ---
+
+---
+src: ./parts/scheduler.md
+---
