@@ -39,3 +39,11 @@ src: ./parts/before_scheduler.md
 ---
 src: ./parts/scheduler.md
 ---
+
+---
+src: ./parts/after_scheduler.md
+---
+
+---
+src: ./parts/outro.md
+---
