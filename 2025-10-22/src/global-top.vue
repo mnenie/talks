@@ -1,7 +1,6 @@
 <script setup>
 import { useNav } from "@slidev/client";
 import { computed } from "vue";
-import GradientBackground from "./components/GradientBackground.vue";
 
 const { currentSlideRoute } = useNav();
 const frontmatter = computed(
