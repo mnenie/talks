@@ -8,7 +8,7 @@ layout: center
 layout: center
 ---
 
-<img src="/alien-future.png" w-140 />
+<img src="/reactivity-future.png" w-140 />
 
 ---
 layout: cover
