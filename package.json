@@ -10,30 +10,31 @@
     "dev": "tsx scripts/picker.ts dev --open",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
+    "export": "tsx scripts/picker.ts export",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.271",
-    "@slidev/cli": "0.50.0-beta.3",
-    "@slidev/client": "0.50.0-beta.3",
-    "@slidev/theme-default": "^0.25.0",
-    "@slidev/theme-seriph": "^0.25.0",
-    "seedrandom": "^3.0.5",
-    "tailwind-merge": "^2.5.4",
-    "unocss": "^0.64.0"
+    "@iconify/json": "catalog:",
+    "@slidev/cli": "catalog:",
+    "@slidev/client": "catalog:",
+    "@slidev/theme-default": "catalog:",
+    "@slidev/theme-seriph": "catalog:",
+    "seedrandom": "catalog:",
+    "markdown-it-magic-link": "catalog:",
+    "tailwind-merge": "catalog:",
+    "unocss": "catalog:"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^4.4.1",
-    "@types/node": "^22.9.0",
-    "@types/prompts": "^2.4.9",
-    "@types/seedrandom": "^3.0.8",
-    "eslint": "^9.14.0",
-    "execa": "^9.5.1",
-    "markdown-it-magic-link": "^0.1.4",
-    "playwright-chromium": "^1.48.2",
-    "prompts": "^2.4.2",
-    "rimraf": "^6.0.1",
-    "serve": "^14.2.4",
-    "typescript": "^5.6.3"
+    "@sxzz/eslint-config": "catalog:",
+    "@types/node": "catalog:",
+    "@types/prompts": "catalog:",
+    "@types/seedrandom": "catalog:",
+    "eslint": "catalog:",
+    "execa": "catalog:",
+    "playwright-chromium": "catalog:",
+    "prompts": "catalog:",
+    "rimraf": "catalog:",
+    "serve": "catalog:",
+    "typescript": "catalog:"
   }
 }

@@ -1,2 +1,45 @@
+catalogMode: prefer
+shellEmulator: true
+
 packages:
-  - "*/src"
+  - '*/src'
+  - 'scripts'
+
+catalog:
+  '@sxzz/eslint-config': ^4.4.1
+  '@iconify/collections': ^1.0.643
+  '@iconify/json': ^2.2.432
+  '@slidev/cli': ^52.11.3
+  '@slidev/client': ^52.11.3
+  '@slidev/theme-default': ^0.25.0
+  '@slidev/theme-seriph': ^0.25.0
+  '@types/node': ^25.0.10
+  '@types/prompts': ^2.4.9
+  '@types/seedrandom': ^3.0.8
+  chroma-js: ^3.2.0
+  eslint: ^9.39.2
+  eslint-typegen: ^2.3.0
+  execa: ^9.6.1
+  fast-glob: ^3.3.3
+  markdown-it-magic-link: ^0.1.4
+  playwright-chromium: ^1.58.0
+  pnpm: ^10.28.1
+  prettier-plugin-slidev: ^1.0.5
+  prompts: ^2.4.2
+  rimraf: ^6.1.2
+  seedrandom: ^3.0.5
+  slidev-addon-graph: ^1.0.0
+  taze: ^19.9.2
+  tinyexec: ^1.0.2
+  serve: ^14.2.4
+  tsx: ^4.21.0
+  typescript: ^5.9.3
+  unocss: 66.4.0
+  vite: ^7.3.1
+  vue-tsc: ^3.2.4
+  ts-node: ^10.9.2
+  'tailwind-merge': ^2.5.4
+
+onlyBuiltDependencies:
+  - esbuild
+  - playwright-chromium
