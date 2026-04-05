@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /vue-reactivity/ --out ../../dist/vue-reactivity",
+    "build:gh-pages": "slidev build --out ../../.static/slides/2026-04-09 --base /talks/slides/2026-04-09/",
+    "export": "slidev export --per-slide --output ../2026-04-09-vue-reactivity.pdf"
+  }
+}
