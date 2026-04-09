@@ -14,12 +14,6 @@ layout: center
 
 ---
 layout: center
----
-
-<img src="/track-trigger.png" w-160 />
-
----
-layout: center
 topTitle: Dep
 topTitleClass: top-220px left-1/2 text-5xl translate-x--1/2
 ---
